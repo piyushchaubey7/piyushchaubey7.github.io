@@ -1,95 +1,115 @@
+```javascript
 $(document).ready(function () {
+
   $(window).scroll(function () {
-    // sticky navbar on scroll script
+
+    // Sticky Navbar
     if (this.scrollY > 20) {
       $("#nav-menu").addClass("sticky");
     } else {
       $("#nav-menu").removeClass("sticky");
     }
 
-    // scroll-up button show/hide script
+    // Scroll Up Button
     if (this.scrollY > 500) {
       $(".scroll-up-btn").addClass("show");
     } else {
       $(".scroll-up-btn").removeClass("show");
     }
+
   });
 
-  // slide-up script
+  // Scroll To Top
   $(".scroll-up-btn").click(function () {
     $("html").animate({ scrollTop: 0 });
-    // removing smooth scroll on slide-up button click
     $("html").css("scrollBehavior", "auto");
   });
 
+  // Smooth Scroll
   $("#nav-menu .menu li a").click(function () {
-    // applying again smooth scroll on menu items click
     $("html").css("scrollBehavior", "smooth");
   });
 
-  // toggle menu/navbar script
+  // Mobile Menu Toggle
   $(".menu-btn").click(function () {
     $("#nav-menu .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
 
-  // typing text animation script
+  // Typing Animation
   var typed = new Typed(".typing", {
-    strings: ["Full Stack Web Developer", "Java Backend Developer", "Web Developer"],
+    strings: [
+      "Automation Test Engineer",
+      "Selenium Automation Engineer",
+      "QA Engineer",
+      "Software Tester"
+    ],
     typeSpeed: 100,
     backSpeed: 60,
-    loop: true,
+    loop: true
   });
 
-  var typed = new Typed(".typing-2", {
-    strings: ["Full Stack Web Developer", "Java Backend Developer", "Web Developer"],
+  var typed2 = new Typed(".typing-2", {
+    strings: [
+      "Automation Test Engineer",
+      "Selenium Automation Engineer",
+      "QA Engineer",
+      "Software Tester"
+    ],
     typeSpeed: 100,
     backSpeed: 60,
-    loop: true,
+    loop: true
   });
 
-  // owl carousel script
+  // Owl Carousel
   $(".carousel").owlCarousel({
     margin: 20,
     loop: true,
     autoplay: true,
-    autoplayTimeOut: 2000,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
+
     responsive: {
       0: {
         items: 1,
-        nav: false,
+        nav: false
       },
+
       600: {
         items: 2,
-        nav: false,
+        nav: false
       },
+
       1000: {
         items: 3,
-        nav: false,
-      },
-    },
+        nav: false
+      }
+    }
   });
+
 });
 
-let drive = document
-  .querySelector(".Drivegoogle")
-  .addEventListener("click", openDrive);
+// Resume Button 1
+const resumeBtn1 = document.querySelector(".googleDrive");
 
-function openDrive() {
-  window.open(
-    (href =
-      "https://drive.google.com/file/d/1CQBobTUFtQv6riQWsiciJeapuTit9jmJ/view?usp=sharing")
-  );
+if (resumeBtn1) {
+  resumeBtn1.addEventListener("click", function () {
+    window.open(
+      "https://drive.google.com/file/d/1CQBobTUFtQv6riQWsiciJeapuTit9jmJ/view?usp=sharing",
+      "_blank"
+    );
+  });
 }
 
-let drive2 = document
-  .querySelector(".googleDrive")
-  .addEventListener("click", openDrive2);
+// Resume Button 2
+const resumeBtn2 = document.querySelector(".Drivegoogle");
 
-function openDrive2() {
-  window.open(
-    (href =
-      "https://drive.google.com/file/d/1CQBobTUFtQv6riQWsiciJeapuTit9jmJ/view?usp=sharing")
-  );
+if (resumeBtn2) {
+  resumeBtn2.addEventListener("click", function () {
+    window.open(
+      "https://drive.google.com/file/d/1CQBobTUFtQv6riQWsiciJeapuTit9jmJ/view?usp=sharing",
+      "_blank"
+    );
+  });
 }
+```
